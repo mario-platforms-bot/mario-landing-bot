@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>$business_name</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Cairo', sans-serif;
+    background: #0f172a;
+    color: #f1f5f9;
+    line-height: 1.8;
+  }
+  .hero {
+    text-align: center;
+    padding: 80px 20px 60px;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  }
+  .hero .field {
+    display: inline-block;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 999px;
+    padding: 6px 20px;
+    font-size: 0.95rem;
+    color: #94a3b8;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, #38bdf8, #34d399);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 12px;
+  }
+  .hero p.sub { color: #94a3b8; font-size: 1.15rem; max-width: 600px; margin: 0 auto 30px; }
+  .cta-main {
+    display: inline-block;
+    background: #22c55e;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 14px 40px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform .15s ease;
+  }
+  .cta-main:hover { transform: scale(1.05); }
+  .section { max-width: 1000px; margin: 0 auto; padding: 50px 20px; }
+  .section h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 28px;
+    text-align: center;
+    transition: border-color .2s ease;
+  }
+  .card:hover { border-color: #38bdf8; }
+  .card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+  .card .desc { color: #94a3b8; font-size: 0.95rem; margin-bottom: 14px; }
+  .card .price {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #34d399;
+    margin-bottom: 18px;
+  }
+  .order-btn {
+    display: inline-block;
+    background: transparent;
+    border: 2px solid #22c55e;
+    color: #22c55e;
+    font-weight: 700;
+    padding: 10px 26px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all .15s ease;
+  }
+  .order-btn:hover { background: #22c55e; color: #fff; }
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+  }
+  .feature {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 18px 26px;
+    font-weight: 700;
+  }
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #64748b;
+    border-top: 1px solid #1e293b;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="field">$field_emoji $field_label</div>
+  <h1>$business_name</h1>
+  <p class="sub">أهلاً بيك في $business_name 👋 اختار اللي يعجبك واطلبه على واتساب، والتوصيل لحد باب البيت.</p>
+  <a class="cta-main" href="$wa_link_general" target="_blank">كلمنا على واتساب 💬</a>
+</div>
+
+<div class="section">
+  <h2>منتجاتنا</h2>
+  <div class="grid">
+$products_html
+  </div>
+</div>
+
+<div class="section">
+  <div class="features">
+    <div class="feature">🚚 توصيل لحد البيت</div>
+    <div class="feature">💵 الدفع كاش عند الاستلام</div>
+    <div class="feature">💬 اطلب في ثانية على واتساب</div>
+  </div>
+</div>
+
+<footer>
+  $business_name © $year — اتعملت بواسطة بوت الصفحات 🤖
+</footer>
+
+</body>
+</html>
