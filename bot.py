@@ -35,7 +35,7 @@ load_dotenv()
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    level=logging.INFO,
+    level=logging.WARNING,
 )
 logger = logging.getLogger(__name__)
 
@@ -259,7 +259,7 @@ def _start_keepalive_server() -> None:
 
     server = HTTPServer(("0.0.0.0", port), Handler)
     threading.Thread(target=server.serve_forever, daemon=True).start()
-    logger.info("keep-alive server on port %s", port)
+    logger.warning("keep-alive server on port %s", port)
 
 # ------------------------- التشغيل -------------------------
 
@@ -296,7 +296,7 @@ def main() -> None:
     )
 
     app.add_handler(conv)
-    logger.info("البوت شغال…")
+    logger.warning("البوت شغال…")
     app.run_polling()
 
 
